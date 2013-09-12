@@ -7,11 +7,11 @@ class BowlingGame
   end
 
   def roll(pins)
-
+    @rolls << pins
   end
 
   def score
-    20
+    @rolls.reduce(:+)
   end
 
 end

@@ -11,16 +11,16 @@ describe BowlingGame do
       expect(game.rolls).to eq([])
     end
   end
-end
+  describe '#score' do
+    it 'scores the game as 20 when one pin is knocked down on each roll' do
+      game = BowlingGame.new
+      20.times { game.roll(1) }
 
-
-
-=begin
-describe Bowling::xxx do
-
-  describe '.initialize' do
-    it 'xxx' do
+      expect(game.score).to eq(20)
     end
   end
+
+
+
+
 end
-=end
